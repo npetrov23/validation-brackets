@@ -1,0 +1,20 @@
+.container {
+    margin-top: 50px;
+}
+
+.brackets {
+    display: flex;
+}
+
+.text, .warning {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.history {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
