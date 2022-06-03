@@ -14,13 +14,13 @@ function brackets($string) {
         {
             for($position_letter = 0; $position_letter < $count_letters; $position_letter++){
                 if(in_array($string[$position_letter], $symbols)) {
-                    $sym = $string[$position_letter];
-                    $key_sym = array_search($sym, $symbols);
-                    if($key_sym % 2 == 0) {
-                        array_push($stack, $sym);
+                    $current_symbol = $string[$position_letter];
+                    $index_bracket = array_search($current_symbol, $symbols);
+                    if($index_bracket % 2 == 0) {
+                        array_push($stack, $current_symbol);
                     }
                     else {
-                        if(empty($stack) || $symbols[$key_sym-1] != end($stack)) {
+                        if(empty($stack) || $symbols[$index_bracket-1] != end($stack)) {
                             $validation = false;
                             break;
                         }
